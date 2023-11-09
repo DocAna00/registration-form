@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Регистрация</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Регистрация</h1>
+        <hr>
+        <h2 class="heading-small">Заполните Ваши данные</h2>
+        <form class="needs-validation">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control input-name" placeholder="Имя" name="username" required>
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control input-email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="select-wrapper">
+                <select class="form-select" required>
+                    <option selected disabled value="">Должность</option>
+                    <option value="1">Директор</option>
+                    <option value="2">Секретарь</option>
+                    <option value="3">HR-специалист</option>
+                    <option value="4">Стажёр</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="password" class="form-control password" placeholder="Пароль" required>
+                    <i class="bi bi-eye-slash togglePassword"></i>
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control password-2" placeholder="Повторите пароль" required>
+                    <i class="bi bi-eye-slash togglePassword-2"></i>
+                </div>
+            </div>
+            <hr>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="switch" checked>
+                <label class="form-check-label form-check-label-big" for="switch">Хотите чтобы Ваш
+                    профиль видели другие
+                    участники платформы?</label>
+                <div class="form-check-text">Включает профиль для просмотра другими пользователями по ссылке</div>
+            </div>
+            <div class="form-check-wrapper">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check" checked required>
+                    <label class="form-check-label form-check-label-small" for="check">
+                        Регистрируясь, Вы соглашаетесь с <span class="extra">политикой конфиденциальности</span> и
+                        обработкой <span class="extra">персональных данных</span>
+                    </label>
+                </div>
+                <button type="submit" class="button" onclick="createRecord()">Зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
